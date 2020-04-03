@@ -1,0 +1,22 @@
+
+
+.film_item_wrapper {
+    width: 100%;
+    overflow: scroll;
+    padding: 1rem;
+}
+
+.film_item_wrapper:hover {
+    cursor: pointer;
+}
+.film_item_wrapper:hover {
+    background: #00d276;
+}
+
+.film_item a {
+    color: rgb(122, 122, 122);
+}
+.film_item_wrapper:hover > .film_item a {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
