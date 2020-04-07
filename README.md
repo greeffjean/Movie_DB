@@ -1,3 +1,50 @@
+## Project Title
+Movie DB - Film app that queries a film database for information.
+
+## Prerequisites
+You will need an internet connection, Node.js installed on your computer.
+
+## Installing
+1. Install the latest version of NodeJS
+2. Open your Code Editor, open terminal and enter `npm install`.
+( now you have all the neccessary modules to test and deploy your app )
+
+## Deployment 
+1. Open your Code Editor, open terminal and enter `npm run build`.
+2. Then enter `cd build`.
+ ( from the build directory you can stage your website, my personal platform I use is surge.sh, or yo can use React scripts )
+
+## Deployment Surge
+1. Install the latest version of NodeJS
+2. Install using npm by running `npm install -g surge`
+2. Run surge from within any directory to publish that directory onto the web.
+
+## Deployment React
+1. Open your Code Editor, open terminal and enter `npm run start`.
+
+
+## Built With 
+Visual Studio Code
+React.js
+
+## Contributing
+The Movie Database API.
+
+## Versioning
+none
+
+## Authors
+Jean Greeff, GitHub - https://github.com/greeffjean
+
+## License
+none
+
+## Acknowledgments
+This project was built in 2020, practicing REACT.JS, JAVASCRIPT.
+
+
+
+## Auto Genrerated 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
