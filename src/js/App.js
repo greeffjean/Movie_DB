@@ -11,8 +11,8 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      film_list: [],
-      activate_film_list: false,
+      filmList: [],
+      activateFilmList: false,
     }
 
     /* Componenet Refs */
@@ -28,25 +28,25 @@ class App extends React.Component {
       return this.clearSearch()
     }
     /* state variables */
-    var film_list = [];
-    var activate_film_list = [];
-    var activate_list = [];
+    var filmList = [];
+    var activateFilmList = [];
+    var activateList = [];
     /* search function */
     if (term.length > 0) {
       Filmdatabase.search(term).then(jsonResponse => {
         if (typeof jsonResponse.results != 'undefined') {
           if (jsonResponse.results.length > 0) {
-            film_list = jsonResponse.results;
-            activate_film_list = true;
-            activate_list = true;
+            filmList = jsonResponse.results;
+            activateFilmList = true;
+            activateList = true;
           }
           else {
-            film_list = [];
-            activate_film_list = false;
+            filmList = [];
+            activateFilmList = false;
           }
         }
         /* set State function */
-        return this.settingData(film_list, activate_film_list, activate_list)
+        return this.settingData(filmList, activateFilmList, activateList)
       })
     }
 
@@ -57,15 +57,15 @@ class App extends React.Component {
   clearSearch() {
     this.searchBarRef.current.clearInputValue();
     this.setState({
-      activate_film_list: false,
+      activateFilmList: false,
     })
   }
 
-  settingData(film_list, activate_film_list, activate_list) {
+  settingData(filmList, activateFilmList, activateList) {
     this.setState({
-      film_list: film_list,
-      activate_film_list: activate_film_list,
-      activate_list: activate_list,
+      filmList: filmList,
+      activateFilmList: activateFilmList,
+      activateList: activateList,
     })
   }
 
@@ -92,9 +92,9 @@ class App extends React.Component {
                 changeBackground={(event) => this.changeBackground(event)}
                 /* (Componenet functions) */
                 clearSearch={(event) => this.clearSearch(event)}
-                display_film_list={this.state.activate_film_list}
+                displayFilmList={this.state.activateFilmList}
                 /* (Componenet Info) */
-                film_list={this.state.film_list} />
+                filmList={this.state.filmList} />
             </div>
           </div>
         </div>

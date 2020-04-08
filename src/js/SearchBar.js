@@ -20,7 +20,7 @@ class SearchBar extends React.Component {
   /* Handle Input Change */
   handleInputChange(event) {
     /* disable list FilmInfo.js*/
-    var disable_list = null;
+    var disableList = null;
     /*( call search render smoothly )*/
     const self = this;
     const e = event.target.value;
@@ -30,9 +30,9 @@ class SearchBar extends React.Component {
     self.setState({
       typingTimeout: setTimeout(function () {
         if (e.length == 0) {
-          disable_list = true;
+          disableList = true;
         }
-          self.props.onChange(e, disable_list);
+          self.props.onChange(e, disableList);
           self.setState({ inputField: e })
       }, 200)
     });
