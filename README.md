@@ -31,7 +31,7 @@ React.js
 ## Testing Step 1
 Please set up your test enviroment by `npm install` the following and make sure that the entry is followed by `--save-dev`:
 1. @babel/core
-2.  @babel/plugin-transform-modules-commonjs
+2. @babel/plugin-transform-modules-commonjs
 3. @babel/register
 4. @testing-library/jest-dom
 5. @testing-library/react
