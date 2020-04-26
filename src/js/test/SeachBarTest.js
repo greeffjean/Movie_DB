@@ -34,7 +34,7 @@ setUpDomEnvironment();
 configure({ adapter: new Adapter() });
 
 
- /* html */
+/* html */
 describe('SearchBar Component testing', function () {
 
   it('search_bar_wrapper should have  \"input\" element', () => {
@@ -49,17 +49,7 @@ describe('SearchBar Component testing', function () {
       wrapper.instance().clearInputValue();
       expect(typeof wrapper.find('input').props.value == 'undefined').to.equal(true);
     });
-});
-
-  /* clearInputValue() */
-  describe('handleInputChange() testing', function () {
-    it('handleInputChange() should set \"state\" to arguement passed', () => {
-      const wrapper = mount(<SearchBar />);
-      wrapper.instance().handleInputChange("test").then((result) => {
-        expect(wrapper.state().inputField === result).to.be.equal(true);
-      })
-    });
-});
+  });
 
 
 

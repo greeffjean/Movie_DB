@@ -49,19 +49,20 @@ describe('App Component testing', function () {
 
   /* search function */
   describe('Search()', () => {
-    it("should return an object full of movie data", () => {
+    it("should return an object full of movie data", async () => {
       const wrapper = mount(<App />);
-      wrapper.instance().search("test").then((results) => {
-        expect(results).to.be.an('array').that.is.not.empty;
-      });
+
+      var result = await wrapper.instance().search("test");
+        expect(result).to.be.an('array').that.is.not.empty;
     });
   
-    it('should update the state with the returned results and film list in state should be same as returned results', () => {
+    it('should update the state with the returned results and film list in state should be same as returned results', async () => {
       const wrapper = mount(<App />);
       let preFilmList = wrapper.state().filmList;
-      wrapper.instance().search("test").then((results) => {
-        expect(preFilmList.length != wrapper.state().filmList.length && results.length == wrapper.state().filmList.length).to.be.equal(true);
-      });
+
+        var result = await wrapper.instance().search("test");
+        expect(preFilmList.length !== wrapper.state().filmList.length && result.length == wrapper.state().filmList.length).to.be.equal(true);
+    
     });
   });
 
