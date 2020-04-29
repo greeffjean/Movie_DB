@@ -1,7 +1,7 @@
 import React from 'react';
 import FilmItem from "./FilmItem"
 import Filmdatabase from './Filmdatabase';
-import '../css/FilmInfo.css';
+import '../css/FilmInfo.scss';
 
 
 

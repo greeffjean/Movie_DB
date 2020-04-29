@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import SearchBar from './SearchBar';
 import FilmInfo from './FilmInfo';
 import Filmdatabase from './Filmdatabase';
-import '../css/App.css';
+import '../css/App.scss';
 
 
 

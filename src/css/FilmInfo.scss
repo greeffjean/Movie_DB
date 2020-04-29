@@ -71,23 +71,24 @@ $cream:hsl(0, 0%, 100%);
                 overflow: scroll;
                 overflow-x: hidden;
                 -ms-overflow-style: none;
+
+                &.active {
+                    display: block;
+                    z-index: 100;
+                    padding-top: 0;
+                    opacity: 1;
+                    transition: 500ms;
+                }
+
+                &:hover{
+                    -ms-overflow-style: none;
+                }
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
             }
 
-            .film_list.active {
-                display: block;
-                z-index: 100;
-                padding-top: 0;
-                opacity: 1;
-                transition: 500ms;
-            }
-
-            .film_list:hover {
-                -ms-overflow-style: none;
-            }
-
-            .film_list::-webkit-scrollbar {
-                display: none;
-            }
 
             /* Film Introduction */
             .film_introduction {
@@ -120,7 +121,7 @@ $cream:hsl(0, 0%, 100%);
                 min-height: 30%;
                 padding: 1rem 1rem 2rem 1rem;
 
-                #film_genre {
+                #filmGenre {
                     width: 100%;
                     display: -webkit-box;
                     display: -ms-flexbox;

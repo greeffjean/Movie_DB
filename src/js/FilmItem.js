@@ -1,5 +1,5 @@
 import React from 'react';
-import "../css/FilmItem.css";
+import "../css/FilmItem.scss";
 
 
 
