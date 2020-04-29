@@ -1,4 +1,6 @@
 import React from 'react';
+
+
 import logo from './logo.svg';
 import SearchBar from './SearchBar';
 import FilmInfo from './FilmInfo';
@@ -88,6 +90,7 @@ class App extends React.Component {
 
             {/* (Bottom Row) */}
             <div className="content_bottom_row">
+              
               < FilmInfo
                 changeBackground={(event) => this.changeBackground(event)}
                 /* (Componenet functions) */
@@ -95,6 +98,9 @@ class App extends React.Component {
                 displayFilmList={this.state.activateFilmList}
                 /* (Componenet Info) */
                 filmList={this.state.filmList} />
+             
+             
+             
             </div>
           </div>
         </div>

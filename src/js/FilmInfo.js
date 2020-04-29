@@ -118,7 +118,7 @@ class FilmInfo extends React.Component {
                             <div id="filmGenre"> <h2 style={{ fontFamily: "Oswald" }}>Genre:</h2> <h4 style={{ fontFamily: "Oswald" }}>{this.state.filmGenre}</h4> </div>
                             <div className="film_information_addittional_row1">
                                 <div className="row1_item1">
-                                    <p style={{ fontFamily: "Lato" }}>Original Release:</p>
+                                    <p style={{ fontFamily: "Lato", paddingRight: "1.5rem" }}>Original Release:</p>
                                     <h2 style={{ fontFamily: "Oswald" }} className="aqua">{this.state.filmRelease}</h2>
                                 </div>
                                 <div className="row1_item2">
@@ -128,7 +128,7 @@ class FilmInfo extends React.Component {
                             </div>
                             <div className="film_information_addittional_row2">
                                 <div className="row2_item1"> 
-                                <p style={{ fontFamily: "Lato" }}>Original Language:</p> 
+                                <p style={{ fontFamily: "Lato" , paddingRight: "1.5rem" }}>Original Language:</p> 
                                 <h2 style={{ fontFamily: "Oswald" }} className="aqua">{this.state.filmLanguage}</h2> 
                                 </div>
                                 <div className="row2_item2">
