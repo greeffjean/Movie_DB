@@ -32,10 +32,14 @@ class FilmInfo extends React.Component {
             info:  /* defualt information display */ defualtInformation
 
         }
+
+        /* DOM ref */
+        this.filmListRef = React.createRef();
     }
 
 
 
+    /* Browser PopState */
     prevState(param) {
         return this.setState({
             filmArray: this.state.filmArray,
@@ -43,8 +47,6 @@ class FilmInfo extends React.Component {
         })
 
     }
-
-
 
 
     /*Film List Change*/
@@ -95,7 +97,7 @@ class FilmInfo extends React.Component {
         })
     }
 
-
+    /* Browser back and forward button function */
     componentDidMount() {
         window.onpopstate = () => {
             var param = window.location.href
@@ -117,14 +119,22 @@ class FilmInfo extends React.Component {
         }
     }
 
+    /* Ensure Film List Starts at Top */
+    componentDidUpdate() {
+        if (this.props.displayFilmList !== true) {
+            this.filmListRef.current.scrollTo(0, 0);
+        }
+    }
 
     render() {
+
+
         /* Render Film Data Into DOM */
         var filmList = [];
         if (typeof this.props.filmList != 'undefined') {
             if (this.props.filmList.length > 0) {
                 this.props.filmList.map(value => {
-                    filmList.push(<Link key={value.id}
+                    filmList.push(<Link key={value.id} style={{ textDecoration: "none" }}
                         to={{
                             pathname: `/film/${value.id}`,
                             state: { detail: this.state.info.info }
@@ -151,7 +161,7 @@ class FilmInfo extends React.Component {
 
                     {/*Film Inner Wrapper Right*/}
                     <div className="film_info_inner_wrapper_right">
-                        <div className={this.props.displayFilmList == true ? "film_list active" : "film_list"}>
+                        <div ref={this.filmListRef} className={this.props.displayFilmList == true ? "film_list active" : "film_list"}>
                             {filmList}
                         </div>
 
@@ -194,8 +204,8 @@ class FilmInfo extends React.Component {
 
                 </div>
                 {/* Background Tint */}
-                <div className="background" style={{ backgroundImage: `url("${this.state.info.mainBanner}")`, backgroundRepeat: "no-repeat", backgroundSize: "cover"}} > 
-                <div className="background_tint"></div> 
+                <div className="background" style={{ backgroundImage: `url("${this.state.info.mainBanner}")`, backgroundRepeat: "no-repeat", backgroundSize: "cover" }} >
+                    <div className="background_tint"></div>
                 </div>
             </div>
 
