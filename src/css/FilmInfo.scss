@@ -18,7 +18,7 @@ $cream:hsl(0, 0%, 100%);
         width: 100%;
         min-height: 100%;
         z-index: 100;
-        
+
         @media only screen and (max-width: 720px) {
             -webkit-box-orient: vertical;
             -webkit-box-direction: reverse;
@@ -80,7 +80,7 @@ $cream:hsl(0, 0%, 100%);
                     transition: 500ms;
                 }
 
-                &:hover{
+                &:hover {
                     -ms-overflow-style: none;
                 }
 

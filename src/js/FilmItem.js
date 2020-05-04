@@ -12,7 +12,7 @@ class FilmItem extends React.Component {
 
   render() {
     return (
-      <div  onClick={(e) => this.onClick()} className="film_item_wrapper">
+      <div onClick={(e) => this.onClick(e)}  className="film_item_wrapper">
         <div className="film_item"> <a> {this.props.title} </a> </div>
       </div>
     );

@@ -1,9 +1,7 @@
 import React from 'react';
 
-
-import logo from './logo.svg';
+import FilmDisplay from './FilmDisplay'
 import SearchBar from './SearchBar';
-import FilmInfo from './FilmInfo';
 import Filmdatabase from './Filmdatabase';
 import '../css/App.scss';
 
@@ -74,6 +72,7 @@ class App extends React.Component {
 
   /* Render */
   render() {
+
     return (
       <div className="main_content_wrapper" >
 
@@ -88,19 +87,23 @@ class App extends React.Component {
                 onChange={(term, disable) => this.search(term, disable)} />
             </div>
 
+
             {/* (Bottom Row) */}
             <div className="content_bottom_row">
-              
-              < FilmInfo
+              < FilmDisplay
                 changeBackground={(event) => this.changeBackground(event)}
                 /* (Componenet functions) */
                 clearSearch={(event) => this.clearSearch(event)}
                 displayFilmList={this.state.activateFilmList}
                 /* (Componenet Info) */
-                filmList={this.state.filmList} />
-             
-             
-             
+                filmList={this.state.filmList}
+              />
+           
+        
+
+
+
+
             </div>
           </div>
         </div>
